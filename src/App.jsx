@@ -1,10 +1,10 @@
 import React from "react";
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
 
 function App() {
-  return <div className="font-Dana-Bold">
-    
-    رامین کریم پور بناب
-  </div>;
+  const router = useRoutes(routes);
+  return <div>{router}</div>;
 }
 
 export default App;
