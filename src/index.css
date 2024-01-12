@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @layer base {
+    @font-face {
+      font-family: "Dana";
+      font-style: normal;
+      src: url(/fonts/DanaFaNum-Regular.woff2) format(woff2);
+    }
+  }
+  @layer base {
+    @font-face {
+      font-family: "Dana-Medium";
+      font-style: normal;
+      src: url(/fonts/DanaFaNum-Mediume.woff2) format(woff2);
+    }
+  }
+  @layer base {
+    @font-face {
+      font-family: "Dana-Bold";
+      font-style: normal;
+      src: url(/fonts/DanaFaNum-Bold.woff2) format(woff2);
+    }
+  }
+}
+body {
+  font-family: "Dana", Arial;
+}
