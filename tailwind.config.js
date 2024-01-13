@@ -4,9 +4,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        "Dana-UltraLight": "Dana-UltraLight",
         Dana: "Dana",
         "Dana-Medium": "Dana-Medium",
         "Dana-Bold": "Dana-Bold",
+      },
+      scale: {
+        135: "1.35",
       },
     },
   },

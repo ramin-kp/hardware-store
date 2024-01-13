@@ -3,30 +3,50 @@
 @tailwind utilities;
 
 @layer base {
-  @layer base {
-    @font-face {
-      font-family: "Dana";
-      font-style: normal;
-      src: url(/fonts/DanaFaNum-Regular.woff2) format(woff2);
-    }
+  @font-face {
+    font-family: "Dana-UltraLight";
+    font-style: normal;
+    src: url(/fonts/DanaFaNum-UltraLight.woff2) format(woff2);
   }
-  @layer base {
-    @font-face {
-      font-family: "Dana-Medium";
-      font-style: normal;
-      src: url(/fonts/DanaFaNum-Mediume.woff2) format(woff2);
-    }
+  @font-face {
+    font-family: "Dana";
+    font-style: normal;
+    src: url(/fonts/DanaFaNum-Regular.woff2) format(woff2);
   }
-  @layer base {
-    @font-face {
-      font-family: "Dana-Bold";
-      font-style: normal;
-      src: url(/fonts/DanaFaNum-Bold.woff2) format(woff2);
-    }
+  @font-face {
+    font-family: "Dana-Medium";
+    font-style: normal;
+    src: url(/fonts/DanaFaNum-Mediume.woff2) format(woff2);
+  }
+  @font-face {
+    font-family: "Dana-Bold";
+    font-style: normal;
+    src: url(/fonts/DanaFaNum-Bold.woff2) format(woff2);
   }
 }
+
 body {
   font-family: "Dana", Arial;
   background-color: #101010;
   color: #ffffffff;
+}
+.active {
+  @apply text-white/80;
+}
+
+@layer components {
+  .swiper-content {
+    height: 100vh;
+  }
+  .swiper-bg {
+    background: url("/image/content/bg.png"), url("/image/content/sbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
 }

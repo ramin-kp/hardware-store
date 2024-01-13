@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SvgIcons from "../assets/SvgIcons";
 
 function Header() {
   return (
     <header>
-      <div className="flex items-center justify-between mx-[53px] mt-2.5 child:text-sm">
+      {/* Top-Header */}
+      <div className="flex items-center justify-between mx-[53px] py-2.5 child:text-sm border-b border-white/25">
         <ul className="flex flex-row-reverse items-center divide-x divide-white/25 child:px-2.5">
           <li>FREE SHIPPING FOR ALL ORDERS OF $150</li>
           <Link to="#">سوالات متداول</Link>
@@ -37,30 +38,31 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between mx-[53px] mt-11">
-        <div className="flex items-start gap-x-1">
+      {/* Header-Content */}
+      <div className="fixed inset-0 z-50 flex items-start justify-between h-20 mx-[53px] mt-20 ">
+        <Link to="/" className="flex items-start gap-x-1">
           <p className="font-Dana-Bold text-xl">HardwareStore</p>
           <img src="/image/content/logo.png" alt="logo" className="w-6 h-6" />
-        </div>
+        </Link>
         <div>
           <ul className="flex items-center gap-x-5 child:flex child:items-center child:gap-x-0.5 hover:child:text-white/80 font-Dana-Bold text-xs">
             <li>
-              <Link to="#">خانه</Link>
+              <NavLink to="#">خانه</NavLink>
             </li>
             <li>
-              <Link to="#">بلاگ</Link>
+              <NavLink to="/2">بلاگ</NavLink>
               <svg className="w-2 h-2 text-white">
                 <use href="#chevron-down"></use>
               </svg>
             </li>
             <li>
-              <Link to="#">صفحات</Link>
+              <NavLink to="/3">صفحات</NavLink>
               <svg className="w-2 h-2 text-white">
                 <use href="#chevron-down"></use>
               </svg>
             </li>
             <li>
-              <Link to="#">فروشگاه</Link>
+              <NavLink to="/3">فروشگاه</NavLink>
               <svg className="w-2 h-2 text-white">
                 <use href="#chevron-down"></use>
               </svg>
@@ -70,22 +72,22 @@ function Header() {
         <ul className="flex items-center gap-x-5 text-sm hover:child:cursor-pointer text-white hover:child:text-white/80">
           <li className="font-Dana-Bold">ورود / ثبت نام</li>
           <li>
-            <svg className="w-5 h-5">
+            <svg className="w-5 h-5 ">
               <use href="#search"></use>
             </svg>
           </li>
           <li>
-            <svg className="w-5 h-5 text-white">
+            <svg className="w-5 h-5">
               <use href="#comparison"></use>
             </svg>
           </li>
           <li>
-            <svg className="w-5 h-5 text-white">
+            <svg className="w-5 h-5">
               <use href="#heart"></use>
             </svg>
           </li>
           <li>
-            <svg className="w-5 h-5 text-white">
+            <svg className="w-5 h-5">
               <use href="#shopping-cart"></use>
             </svg>
           </li>
