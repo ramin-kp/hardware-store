@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import Header from "./Layout/Header";
-import Footer from "./Layout/Footer";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -15,12 +14,12 @@ function Main() {
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
     progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 50)}s`;
+    progressContent.current.textContent = `${Math.ceil(time * 10)}s`;
   };
   return (
-    <div className="flex flex-col">
+    <section className="flex flex-col">
       <Header />
-      <div className="w-full h-screen">
+      <div className="w-full h-screen cursor-pointer">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -123,8 +122,7 @@ function Main() {
           </div>
         </Swiper>
       </div>
-      <Footer />
-    </div>
+    </section>
   );
 }
 
