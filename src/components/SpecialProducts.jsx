@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function SpecialProducts(props) {
-  console.log(props);
   const { name, image, price, slug, offs } = props;
   return (
     <div className="w-[293px] group">

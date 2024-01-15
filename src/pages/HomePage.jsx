@@ -5,10 +5,12 @@ import CategoryBox from "../components/CategoryBox";
 import Footer from "../components/Layout/Footer";
 import SpecialProducts from "../components/SpecialProducts";
 import CustomPc from "../components/CustomPc";
+import GamerBox from "../components/ReadyPcs";
 
 function HomePage() {
   const [categorys, setCategorys] = useState([]);
   const [specialProducts, setSpecialProducts] = useState([]);
+  const [readyPcs, setReadyPcs] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +26,13 @@ function HomePage() {
     };
     fetchData();
   }, []);
-  console.log(specialProducts);
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetch = await api.get("/readyPcs");
+      setReadyPcs(fetch);
+    };
+    fetchData();
+  }, []);
   return (
     <main>
       <Main />
@@ -65,6 +73,7 @@ function HomePage() {
           </div>
         </div>
         <CustomPc />
+        <GamerBox data={readyPcs} />
       </div>
       <Footer />
     </main>

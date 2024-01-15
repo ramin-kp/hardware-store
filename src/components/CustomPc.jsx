@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCube, Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 function CustomPc() {
   return (
     <section className="flex items-center justify-between gap-x-12 mt-10 pl-11">
@@ -33,6 +34,14 @@ function CustomPc() {
               <p className="text-base">Cras ultricies ligula sed</p>
             </div>
           </div>
+        </div>
+        <div className="mt-12">
+          <Link className="inline-block bg-indigo-500 hover:bg-indigo-600 px-5 py-3 ml-5 transition-all duration-200">
+            مرحله بعدی
+          </Link>
+          <Link className="inline-block border-2 border-white/60 hover:border-white px-5 py-3 transition-all duration-200">
+            انتخاب کیس
+          </Link>
         </div>
       </div>
       <div className="w-[584px] h-[586px]">
