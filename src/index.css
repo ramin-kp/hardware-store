@@ -43,6 +43,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .store-section__bg {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 51%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("/image/content/rgb-bg.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 @layer components {
   .card-before::before {

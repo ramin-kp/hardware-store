@@ -6,6 +6,7 @@ import Footer from "../components/Layout/Footer";
 import SpecialProducts from "../components/SpecialProducts";
 import CustomPc from "../components/CustomPc";
 import GamerBox from "../components/ReadyPcs";
+import StoreSection from "../components/StoreSection";
 
 function HomePage() {
   const [categorys, setCategorys] = useState([]);
@@ -74,6 +75,7 @@ function HomePage() {
         </div>
         <CustomPc />
         <GamerBox data={readyPcs} />
+        <StoreSection />
       </div>
       <Footer />
     </main>
