@@ -19,6 +19,7 @@ function Main() {
   return (
     <section className="flex flex-col">
       <Header />
+      {/* slider */}
       <div className="w-full h-screen cursor-pointer">
         <Swiper
           spaceBetween={30}

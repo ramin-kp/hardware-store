@@ -3,24 +3,34 @@ import Main from "../components/Main";
 import api from "../services/api";
 import CategoryBox from "../components/CategoryBox";
 import Footer from "../components/Layout/Footer";
+import SpecialProducts from "../components/SpecialProducts";
 
 function HomePage() {
-  const [data, setData] = useState([]);
+  const [categorys, setCategorys] = useState([]);
+  const [specialProducts, setSpecialProducts] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       const fetch = await api.get("/menus");
-      setData(fetch);
+      setCategorys(fetch);
     };
     fetchData();
   }, []);
-  console.log(data);
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetch = await api.get("/specialProducts");
+      setSpecialProducts(fetch);
+    };
+    fetchData();
+  }, []);
+  console.log(specialProducts);
   return (
     <main>
       <Main />
       {/* category's */}
-      {data.length ? (
+      {categorys.length ? (
         <div className="grid grid-cols-6 gap-0 mt-2">
-          {data.map((item) => (
+          {categorys.map((item) => (
             <Fragment key={item.id}>
               <CategoryBox {...item} />
             </Fragment>
@@ -29,6 +39,31 @@ function HomePage() {
       ) : (
         <h1>loading...</h1>
       )}
+      {/* specialProducts */}
+      <div className="container">
+        <div className="text-center mt-[90px]">
+          <div className="mb-14">
+            <h1 className="font-Dana-Bold text-2xl/10">محصولات ویژه</h1>
+            <p className="w-[440px] mx-auto text-lg/relaxed">
+              پرفروش ترین محصولات از برند های محبوب و برتر دنیا و با کیفیت مناسب
+              در فروشگاه سخت افزار
+            </p>
+          </div>
+          <div className="grid grid-cols-4 gap-y-5">
+            {specialProducts ? (
+              <>
+                {specialProducts.map((item) => (
+                  <Fragment key={item.id}>
+                    <SpecialProducts {...item} />
+                  </Fragment>
+                ))}
+              </>
+            ) : (
+              <h1>loading ...</h1>
+            )}
+          </div>
+        </div>
+      </div>
       <Footer />
     </main>
   );

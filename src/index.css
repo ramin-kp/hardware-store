@@ -44,6 +44,19 @@ body {
     background-size: cover;
   }
 }
+@layer components {
+  .card-before::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    inset: 0;
+    top: 40%;
+    right: 92%;
+    transform: rotate(45deg);
+    @apply bg-black/50;
+  }
+}
 
 @layer utilities {
   .flex-center {

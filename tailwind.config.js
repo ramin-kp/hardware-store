@@ -12,6 +12,13 @@ export default {
       scale: {
         135: "1.35",
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          xl: "9rem",
+        },
+      },
     },
   },
   plugins: [
