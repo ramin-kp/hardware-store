@@ -4,6 +4,7 @@ import api from "../services/api";
 import CategoryBox from "../components/CategoryBox";
 import Footer from "../components/Layout/Footer";
 import SpecialProducts from "../components/SpecialProducts";
+import CustomPc from "../components/CustomPc";
 
 function HomePage() {
   const [categorys, setCategorys] = useState([]);
@@ -63,6 +64,7 @@ function HomePage() {
             )}
           </div>
         </div>
+        <CustomPc />
       </div>
       <Footer />
     </main>

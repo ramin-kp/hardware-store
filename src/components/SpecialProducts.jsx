@@ -9,27 +9,27 @@ function SpecialProducts(props) {
       <div className="relative overflow-hidden">
         {/* lef-box */}
         <div className="absolute -left-8 group-hover:left-2 top-2  child:my-3 bg-black w-10 text-white transition-all duration-500">
-          <div className="relative child:hover:opacity-100 cursor-pointer">
+          <div className="rel6tiv6 child:hover:opacity-100 cursor-pointer">
             <svg className="w-7 h-7 mx-auto text-white hover:text-white/80">
               <use href="#comparison"></use>
             </svg>
-            <span className="inline-block absolute top-0 left-12 px-2 py-1 bg-black/50 opacity-0 transition-all duration-500 card-before">
+            <span className="inline-block absolute top-0 left-12 px-2 py-1 bg-black/50 opacity-0 text-sm transition-all duration-500 card-before">
               مقایسه
             </span>
           </div>
           <div className="relative child:hover:opacity-100 cursor-pointer">
-            <svg className="w-7 h-7 mx-auto text-white hover:text-white/80">
+            <svg className="w-6 h-6 mx-auto text-white hover:text-white/80">
               <use href="#search"></use>
             </svg>
-            <span className="inline-block absolute top-0 left-12 px-2 py-1 bg-black/50 opacity-0 transition-all duration-500 card-before">
+            <span className="inline-block absolute top-0 left-12 px-2 py-1 bg-black/50 opacity-0 text-sm transition-all duration-500 card-before">
               جستجو
             </span>
           </div>
           <div className="relative child:hover:opacity-100 cursor-pointer">
-            <svg className="w-7 h-7 mx-auto text-white hover:text-white/80">
+            <svg className="w-6 h-6 mx-auto text-white hover:text-white/80">
               <use href="#heart"></use>
             </svg>
-            <span className="inline-block absolute top-0 left-12 w-[200px] px-2 py-1 bg-black/50 opacity-0 transition-all duration-500 card-before">
+            <span className="inline-block absolute top-0 left-12 w-[200px] px-2 py-1 bg-black/50 text-sm opacity-0 transition-all duration-500 card-before">
               افزودن به علاقه مندی ها
             </span>
           </div>
