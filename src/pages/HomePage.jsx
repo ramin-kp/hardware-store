@@ -14,6 +14,7 @@ function HomePage() {
   const [categorys, setCategorys] = useState([]);
   const [specialProducts, setSpecialProducts] = useState([]);
   const [readyPcs, setReadyPcs] = useState([]);
+  const [latestEvents, setLatestEvents] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,6 +34,13 @@ function HomePage() {
     const fetchData = async () => {
       const fetch = await api.get("/readyPcs");
       setReadyPcs(fetch);
+    };
+    fetchData();
+  }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      const fetch = await api.get("/latestEvents?_embed=user");
+      setLatestEvents(fetch);
     };
     fetchData();
   }, []);
@@ -81,7 +89,7 @@ function HomePage() {
       </div>
       <GamingSetupsSection />
       <div className="container">
-        <LatestEventsSection />
+        <LatestEventsSection data={latestEvents} />
       </div>
       <Footer />
     </main>
